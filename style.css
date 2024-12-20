@@ -1,0 +1,129 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+#quiz {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: chartreuse;
+  position: relative;
+}
+.mainContainer {
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  position: absolute;
+}
+.container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  position: absolute;
+}
+.container:nth-child(2),
+.container:nth-child(3),
+.container:nth-child(4),
+.container:nth-child(5),
+.container:nth-child(6) {
+  transform: translateX(400px);
+  display: none;
+}
+
+.header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+  margin-top: 20px;
+}
+.question {
+  width: 90%;
+  display: flex;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #000;
+}
+.answer {
+  width: 90%;
+  height: 50%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.active{
+    background-color: rgb(130, 206, 130);
+    color: green;
+}
+
+.passive{
+    background-color: rgb(224, 118, 118);
+    color: red;
+}
+
+.answer span {
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  display: flex;
+  justify-content: start;
+  cursor: pointer;
+}
+button {
+  padding: 5px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: brown;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#container6 span {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 30px 0px;
+}
+
+#container6 .result {
+  margin-bottom: 30px;
+}
+#container6 .result p {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 500px) {
+    .mainContainer {
+        width: 100%;
+        height: 100%;
+        border-radius: 1px;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+      }
+      .answer span{
+        height: 50px;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+}
